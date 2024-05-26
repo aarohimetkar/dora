@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Array Operations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div>
+            <h3>Integer Array</h3>
+            <p>Enter Integer Array: (separated by commas): <input type="text" id="userIntegerArray"
+                    class="form-control"></p>
+            <button class="btn btn-primary" onclick="processIntegerArray()">Process Integer Array</button>
+            <br><br>
+            <p>Original Array : <span id="integerArray"></span></p>
+            <p>Sorted Array : <span id="sortedIntegerArray"></span></p>
+            <p>Search Integer: <input type="number" id="searchInteger" class="form-control"></p>
+            <button class="btn btn-primary" onclick="searchInteger()">Search</button>
+            <p id="searchIntegerResult"></p>
+        </div>
+        <div>
+            <h3>Named Entities Array</h3>
+            <p>Enter the Named Entities Array(separated by commas): <input type="text" id="namedEntitiesArray"
+                    class="form-control"></p>
+            <button class="btn btn-primary" onclick="processNamedEntitiesArray()">Process Named Entities Array
+            </button>
+            <br><br>
+            <p>Original Named Entities Array: <span id="originalNamedEntitiesArray"></span></p>
+            <p>Sorted Named Entities Array : <span id="sortedNamedEntitiesArray"></span></p>
+            <p>Search Entity <input type="text" id="searchEntity" class="form-control"></p>
+            <button class="btn btn-primary" onclick="searchEntity()">Search</button>
+            <p id="searchEntityResult"></p>
+        </div>
+
+    </div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+<script>
+    let integerArray = [];
+    let sortedIntegerArray = [];
+    let namedEntitiesArray = [];
+    let sortedNamedEntitiesArray = [];
+
+
+    function processIntegerArray() {
+        const userInputValue = document.getElementById("userIntegerArray").value.trim();
+        integerArray = userInputValue.split(',').map(Number);
+        document.getElementById("integerArray").innerText = integerArray.join(', ');
+
+        sortedIntegerArray = [...integerArray].sort((a, b) => a - b);
+        document.getElementById("sortedIntegerArray").innerText = sortedIntegerArray.join(', ');
+
+    }
+
+    function searchInteger() {
+    const searchValue = parseInt(document.getElementById("searchInteger").value.trim());
+    if (!isNaN(searchValue)) {
+        const foundIndex = sortedIntegerArray.indexOf(searchValue);
+        if (foundIndex !== -1) {
+            document.getElementById("searchIntegerResult").innerText = `Element ${searchValue} found at index ${foundIndex}`;
+        } else {
+            document.getElementById("searchIntegerResult").innerText = `Element ${searchValue} not found in the array`;
+        }
+    } else {
+        document.getElementById("searchIntegerResult").innerText = "Please enter a valid number";
+    }
+}
+
+    function processNamedEntitiesArray() {
+        const userEntitiesInput = document.getElementById("namedEntitiesArray").value.trim();
+        namedEntitiesArray = userEntitiesInput.split(',').map(entity => entity.trim());
+        document.getElementById("originalNamedEntitiesArray").innerText = namedEntitiesArray.join(', ');
+
+        sortedNamedEntitiesArray = [...namedEntitiesArray].sort();
+        document.getElementById("sortedNamedEntitiesArray").innerText = sortedNamedEntitiesArray.join(', ');
+}
+
+function searchEntity() {
+    const searchValue = document.getElementById("searchEntity").value.trim();
+    if (searchValue !== "") {
+        const foundIndexInSortedArray = sortedNamedEntitiesArray.indexOf(searchValue);
+        if (foundIndexInSortedArray !== -1) {
+            document.getElementById("searchEntityResult").innerText = `Entity found at index ${foundIndexInSortedArray}`;
+
+        } else {
+            document.getElementById("searchEntityResult").innerText = "Entity not found in array";
+
+        }
+    } else {
+        document.getElementById("searchEntityResult").innerText = "Please enter a valid entity";
+    }
+}
+</script>
+
+</html>
