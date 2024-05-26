@@ -1,0 +1,5 @@
+1. place the folder in htdocs
+
+2. open xampp, start apache
+
+3. open http://localhost/electricity_bill_calculator/index.html

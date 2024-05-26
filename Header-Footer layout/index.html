@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h2>My Website</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="content">
+    <div class="container">
+      <section id="colorSection">
+        <h2>Change the Section Color</h2>
+        <div class="color-buttons">
+          <button class="red" onclick="changeColor('#c0392b')">Red</button>
+          <button class="green" onclick="changeColor('#27ae60')">Green</button>
+          <button class="blue" onclick="changeColor('#2980b9')">Blue</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 My Website. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

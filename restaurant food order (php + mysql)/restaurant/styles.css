@@ -1,0 +1,111 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+/* Form styles */
+.order-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.form-input {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Menu styles */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.menu-item {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.menu-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Button styles */
+.btn-submit {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: #45a049;
+}
+
+/* Response message styles */
+.order-response {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Footer styles */
+footer p {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}

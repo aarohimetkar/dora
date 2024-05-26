@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Order Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Restaurant Order Management</h1>
+    </header>
+    <div class="container">
+        <h2 class="section-heading">Place Your Order</h2>
+        <form id="orderForm" class="order-form">
+            <label for="customer_name" class="form-label">Customer Name:</label>
+            <input type="text" id="customer_name" name="customer_name" class="form-input" required>
+    
+            <h3 class="section-heading">Menu</h3>
+            
+            <div class="menu" id="menu">
+                <!-- Menu items will be loaded here via JavaScript -->
+                <div class="menu-item">
+                    <img src="images/pasta.jpg" alt="Pasta">
+                    <h3>Pasta</h3>
+                    <input type="number" min="0" placeholder="Quantity">
+                </div>
+                <div class="menu-item">
+                    <img src="images/salad.jpeg" alt="Pizza">
+                    <h3>Salad</h3>
+                    <input type="number" min="0" placeholder="Quantity">
+                </div>
+                <div class="menu-item">
+                    <img src="images/burger.jpeg" alt="Pizza">
+                    <h3>Burger</h3>
+                    <input type="number" min="0" placeholder="Quantity">
+                </div>
+                <div class="menu-item">
+                    <img src="images/black_coffee.jpeg" alt="Pizza">
+                    <h3>Black Coffee</h3>
+                    <input type="number" min="0" placeholder="Quantity">
+                </div>
+                <div class="menu-item">
+                    <img src="images/coffee.jpg" alt="Pizza">
+                    <h3>Coffee</h3>
+                    <input type="number" min="0" placeholder="Quantity">
+                </div>
+                <div class="menu-item">
+                    <img src="images/pizza.jpeg" alt="Pizza">
+                    <h3>Pizza</h3>
+                    <input type="number" min="0" placeholder="Quantity">
+                </div>
+            </div>
+            
+    
+            <button type="submit" class="btn-submit">Submit Order</button>
+        </form>
+        <div id="response" class="order-response"></div>
+    </div>    
+    <footer>
+        <p>&copy; 2024 Restaurant Order Management</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

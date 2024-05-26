@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .led {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #808080; /* Grey by default */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow to create depth */
+    transition: background-color 0.3s ease; /* Smooth transition for color change */
+    margin-bottom: 40px;
+  }
+  
+  .led.on {
+    background-color: #00ff00; /* Green when on */
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .on-btn, .off-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    margin: 0 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .on-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .off-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .on-btn:hover, .off-btn:hover {
+    background-color: #4a1d85;
+  }
+  

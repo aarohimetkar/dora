@@ -1,0 +1,5 @@
+1. place the file in htdocs
+
+2. open xampp, start apache
+
+3. open http://localhost/string_manipulations.php
