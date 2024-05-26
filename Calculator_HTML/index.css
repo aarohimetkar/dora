@@ -1,0 +1,29 @@
+h1,h2{
+    text-align: center;
+}
+.container{
+    background-color: rgba(20, 1, 1, 0.669);
+    height:380px;
+    width:260px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.button{
+    background-color: rgb(226, 213, 213);
+    border-radius: 10px;
+    border:2px solid black;
+    height:40px;
+    width:50px;
+    font-size:18px;
+    cursor:pointer;
+}
+.row1 input{
+    height:30px;
+    width:200px;
+    font-size:17px;
+}
