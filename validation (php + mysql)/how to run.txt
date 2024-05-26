@@ -1,0 +1,7 @@
+1. place the folder in htdocs
+
+2. open xampp, start apache and mysql
+
+3. go to http://localhost/phpmyadmin, create the user_management database, and run the provided SQL scripts
+
+4. open http://localhost/validation/index.html
